@@ -1,16 +1,18 @@
 document.getElementById('paymentForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const membertelephone = document.getElementById('membertelephone').value;
-    const memberhouseno = document.getElementById('memberhouseno').value;
-    const date = document.getElementById('date').value;
-    const amount = document.getElementById('amount').value;
+    // Ambil nilai dari borang
+    const namaAhli = document.getElementById('namaAhli').value;
+    const nomborTelefon = document.getElementById('nomborTelefon').value;
+    const nomborRumah = document.getElementById('nomborRumah').value;
+    const tarikhBayaran = document.getElementById('tarikhBayaran').value;
+    const amaunBayaran = document.getElementById('amaunBayaran').value;
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbxDOSTlHSTtqxBK90C0ViPTzHB3dgUSbLSgJsE9hczFkgOHAvhaM-ggVCoc79ilTAftcg/exec', {
+    // Hantar data ke Google Apps Script
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzx9DA_95obXNTvQ2cPIxtL5rrY0Lbi-mKNvzW0HtbGpwx8hWxdvpFop_ttkW-GSE8wVw/exec', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, memberId, date, amount }),
+        body: JSON.stringify({ namaAhli, nomborTelefon, nomborRumah, tarikhBayaran, amaunBayaran }),
     });
 
     const result = await response.json();
