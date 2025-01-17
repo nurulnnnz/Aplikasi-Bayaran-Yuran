@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Bendahari</title>
+</head>
+<body>
+    <h1>Aplikasi Bendahari Persatuan</h1>
+    <form id="paymentForm">
+        <label for="name">Nama Ahli:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="memberId">Nombor Telefon Ahli:</label>
+        <input type="text" id="membertelephone" required><br>
+        
+        <label for="memberId">Nombor Rumah Ahli:</label>
+        <input type="text" id="memberhouseno" required><br>
+        
+        <label for="date">Tarikh Bayaran:</label>
+        <input type="date" id="date" required><br>
+        
+        <label for="amount">Jumlah Bayaran (RM):</label>
+        <input type="number" id="amount" required><br>
+        
+        <button type="submit">Kemaskini Bayaran</button>
+    </form>
+
+    <p id="statusMessage"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
