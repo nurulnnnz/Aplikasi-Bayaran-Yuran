@@ -9,7 +9,7 @@ document.getElementById('paymentForm').addEventListener('submit', async (event) 
     const amaunBayaran = document.getElementById('amaunBayaran').value;
 
     // Hantar data ke Google Apps Script
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzx9DA_95obXNTvQ2cPIxtL5rrY0Lbi-mKNvzW0HtbGpwx8hWxdvpFop_ttkW-GSE8wVw/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbySfc0EUMItNp7c2yI1gER1xgMg5mkjm4H6rsnJYhaIIBG7p5BPSwgHVBLVrKLynU7Z1g/exec', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ namaAhli, nomborTelefon, nomborRumah, tarikhBayaran, amaunBayaran }),
